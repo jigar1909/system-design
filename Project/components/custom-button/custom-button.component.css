@@ -1,0 +1,147 @@
+
+
+.primary {
+    --default-bg: var(--primary-500);
+    --default-color: var(--text-white);
+    --default-border: transparent;
+    --hover-bg: var(--primary-700);
+    --hover-color: var(--text-white);
+    --hover-border: transparent;
+    --disabled-bg: var(--grey-100);
+    --disabled-color: var(--text-white);
+    --disabled-border: transparent;
+    --error-default-bg: var(--semantic-error-500);
+    --error-hover-bg: var(--semantic-error-600);
+    --error-default-color: var(---white);
+    --error-hover-color: var(--text-white);
+    --error-default-border: var(--semantic-error-500);
+    --error-hover-border: var(--semantic-error-500);
+    --svg-icon-color: var(--default-color);
+}
+
+.outline {
+    --default-bg: none;
+    --default-color: var(--primary-500);
+    --default-border: var(--primary-500);
+    --hover-bg: var(--primary-50);
+    --hover-color: var(--primary-700);
+    --hover-border: var(--primary-700);
+    --disabled-bg: none;
+    --disabled-color: var(--grey-100);
+    --disabled-border: var(--grey-100);
+    --error-default-bg: none;
+    --error-hover-bg: var(--semantic-error-50);
+    --error-default-color: var(--semantic-error-500);
+    --error-hover-color: var(--semantic-error-600);
+    --error-default-border: var(--semantic-error-500);
+    --error-hover-border: var(--semantic-error-600);
+    --svg-icon-color: var(--default-color);
+}
+
+.transparent {
+    --default-bg: none;
+    --default-color: var(--primary-500);
+    --default-border: transparent;
+    --hover-bg: var(--primary-50);
+    --hover-color: var(--primary-700);
+    --hover-border: transparent;
+    --disabled-bg: none;
+    --disabled-color: var(--grey-100);
+    --disabled-border: transparent;
+    --error-default-bg: none;
+    --error-hover-bg: var(--semantic-error-50);
+    --error-default-color: var(--semantic-error-500);
+    --error-hover-color: var(--semantic-error-600);
+    --error-default-border: transparent;
+    --error-hover-border: transparent;
+    --svg-icon-color: var(--default-color);
+}
+
+.large {
+    --sizing-1: var(--small-8px);
+    --sizing-2: var(--small-16px);
+    --sizing-3: var(--small-8px);
+    --height: var(--medium-36px);
+    --font-size: var(--small-14px);
+}
+
+.medium {
+    --sizing-1: var(--small-6px);
+    --sizing-2: var(--small-12px);
+    --sizing-3: var(--small-8px);
+    --height: var(--medium-32px);
+    --font-size: var(--small-14px);
+}
+
+.small {
+    --sizing-1: var(--small-4px);
+    --sizing-2: var(--small-8px);
+    --sizing-3: var(--small-8px);
+    --height: var(--medium-24px);
+    --font-size: var(--small-12px);
+}
+
+.disabled {
+    background-color: var(--disabled-bg) !important;
+    color: var(--disabled-color) !important;
+    border: 1px solid var(--disabled-border) !important;
+    cursor: default !important;
+    --svg-icon-color: var(--disabled-color) !important;
+}
+
+.error {
+    background-color: var(--error-default-bg) !important;
+    color: var(--error-default-color) !important;
+    border: 1px solid var(--error-default-border) !important;
+    --svg-icon-color: var(--error-default-color) !important;
+}
+
+.error:hover {
+    background-color: var(--error-hover-bg) !important;
+    color: var(--error-hover-color) !important;
+    --svg-icon-color: var(--error-hover-color) !important;
+}
+
+.custom-button {
+    display: inline-flex;
+    width: max-content;
+    padding: var(--sizing-1) var(--sizing-2);
+    justify-content: center;
+    align-items: center;
+    gap: var(--sizing-3);
+    box-sizing: border-box;
+    height: var(--height);
+
+    border-radius: 4px;
+    font-family: var(--font);
+    font-size: var(--font-size);
+    cursor: pointer;
+
+    background-color: var(--default-bg);
+    border: 1px solid var(--default-border);
+    color: var(--default-color);
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.custom-button:hover {
+    background-color: var(--hover-bg);
+    border: 1px solid var(--hover-border);
+    color: var(--hover-color);
+    --svg-icon-color: var(--hover-color);
+}
+
+.svg-icon {
+    mask-size: contain;
+    width: 16px;
+    height: 16px;
+    background-color: var(--svg-icon-color);
+}
+
+.btn-hide {
+    display: none;
+}

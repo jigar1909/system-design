@@ -1,0 +1,6 @@
+<button (click)="buttonClicked($event)" id="custom-button-{{uuid}}" class="btn-hide"
+    [type]="isSubmit ? 'submit' : 'button'"></button>
+<label for="custom-button-{{uuid}}" role="button" tabindex="0" (mouseenter)="mouseIn()" (mouseleave)="mouseOut()"
+    (keydown.enter)="buttonClicked($event)" for="custom-button" class="custom-button saras-theme {{state}} {{type}} {{size}}">
+    {{text}}
+</label>
