@@ -1,7 +1,5 @@
-
-
 .primary {
-    --default-bg: var(--primary-500);
+    --default-bg: var(--primary-500);  /* Use primary-500 for button background */
     --default-color: var(--text-white);
     --default-border: transparent;
     --hover-bg: var(--primary-700);
@@ -12,12 +10,20 @@
     --disabled-border: transparent;
     --error-default-bg: var(--semantic-error-500);
     --error-hover-bg: var(--semantic-error-600);
-    --error-default-color: var(---white);
+    --error-default-color: var(--text-white);
     --error-hover-color: var(--text-white);
     --error-default-border: var(--semantic-error-500);
     --error-hover-border: var(--semantic-error-500);
     --svg-icon-color: var(--default-color);
+
+    background-color: var(--default-bg); 
+    color: var(--default-color);
+    border: 1px solid var(--default-border);
 }
+
+
+/* Other button styles remain unchanged */
+
 
 .outline {
     --default-bg: none;

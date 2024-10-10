@@ -1,0 +1,11 @@
+<div class="card {{type}}" >
+    <img src="https://img.freepik.com/premium-photo/grainy-gradient-background-red-white-blue-colors-with-soft-faded-watercolor-border-texture_927344-24167.jpg"
+        alt="" class="cardImg" [style.display]="(type=='Priamry' || type=='Card Image & Description')?'block':'none'">
+    <h2 class="cardTitle" [style.display]="(type=='Priamry' || type=='Card Title & Description')?'block':'none'">Card
+        Title</h2>
+    <p class="cardParagraph"
+        [style.display]="(type=='Priamry' || type=='Card Image & Description' || type=='Card Title & Description')?'block':'none'">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, corporis distinctio
+        molestias voluptatum tempore praesentium a eius ea minima ratione molestiae sunt expedita!</p>
+        <app-custom-button class="cardBtn" [style.display]="(type=='Priamry')?'block':'none'" type="primary" size="medium" state="normal"></app-custom-button>
+</div>

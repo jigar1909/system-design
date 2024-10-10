@@ -1,0 +1,11 @@
+<div class="navbar">
+    <div class="navleft">
+        <a href="#" class="navlink">Home</a>
+        <a href="#" class="navlink">About</a>
+        <a href="#" class="navlink">Contact</a>
+    </div>
+    <div class="right" *ngIf="showButtons">
+        <app-custom-button type="primary" size="medium" state="normal" text="login"></app-custom-button>
+        <app-custom-button type="primary" size="medium" state="normal" text="Signup"></app-custom-button>
+    </div>
+</div>

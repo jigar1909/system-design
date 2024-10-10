@@ -1,0 +1,20 @@
+.card{
+    display: flex !important;
+    flex-direction: column;
+    width: 250px;
+    border: 0.5px solid #ddd;
+    box-shadow: 2px 2px 1px rgba(0,0,0,0.4);
+}
+.cardImg{
+    width: 100%;
+}
+.cardTitle{
+    margin: 10px 0px 0px 10px;
+}
+.cardParagraph{
+    padding: 0px 10px;
+}
+.cardBtn{
+    width: fit-content;
+    margin: 0px 10px 10px 10px;
+}

@@ -4,17 +4,20 @@ import { CustomButtonComponent } from "../../Project/components/custom-button/cu
 import { ButtonInterface } from '../../Project/Interface/custom-button-interface';
 import { GridInterface } from '../../Project/Interface/grid-interface';
 import rawData from './data';
+import { CardComponent } from "../../Project/components/Card/card/card.component";
+import { NavbarComponent } from "../../Project/components/navbar/navbar.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CustomButtonComponent],
+  imports: [RouterOutlet, CustomButtonComponent, CardComponent, NavbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'saras-design';
-  global_theme: string = 'saras-theme';
+  global_theme: string = 'theme-primary';
+  golbal_mode: string = 'dark_mode';
   params: GridInterface = {
     viewButton: false,
     cellType: '',

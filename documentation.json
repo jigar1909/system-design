@@ -34,7 +34,7 @@
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-f547dd2f6c7a6c5dc67e6a9a2a53755fcb7731aff141de281b878c1c284d7736b086caba0619049b0937f5a63230d9e8edbbf0990d8ccdee0be6e7002466d6d0",
+            "id": "component-AppComponent-e7777b5b2f876e6b6431531cc953827b27837b63923dd3631d243e624d99a08f552fa558257967491f4ba4e7356d4242a6791f0cfacd9afdfa40f7d276c95bec",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -54,13 +54,23 @@
             "propertiesClass": [
                 {
                     "name": "global_theme",
-                    "defaultValue": "'saras-theme'",
+                    "defaultValue": "'theme-primary'",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 17
+                    "line": 19
+                },
+                {
+                    "name": "golbal_mode",
+                    "defaultValue": "'dark_mode'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 20
                 },
                 {
                     "name": "params",
@@ -70,7 +80,7 @@
                     "type": "GridInterface",
                     "optional": false,
                     "description": "",
-                    "line": 18
+                    "line": 21
                 },
                 {
                     "name": "rowData",
@@ -80,7 +90,7 @@
                     "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 27
+                    "line": 30
                 },
                 {
                     "name": "title",
@@ -90,7 +100,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 16
+                    "line": 18
                 }
             ],
             "methodsClass": [],
@@ -106,18 +116,26 @@
                 {
                     "name": "CustomButtonComponent",
                     "type": "component"
+                },
+                {
+                    "name": "CardComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "NavbarComponent",
+                    "type": "component"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\r\nimport { RouterOutlet } from '@angular/router';\r\nimport { CustomButtonComponent } from \"../../Project/components/custom-button/custom-button.component\";\r\nimport { ButtonInterface } from '../../Project/Interface/custom-button-interface';\r\nimport { GridInterface } from '../../Project/Interface/grid-interface';\r\nimport rawData from './data';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  standalone: true,\r\n  imports: [RouterOutlet, CustomButtonComponent],\r\n  templateUrl: './app.component.html',\r\n  styleUrl: './app.component.css'\r\n})\r\nexport class AppComponent {\r\n  title = 'saras-design';\r\n  global_theme: string = 'saras-theme';\r\n  params: GridInterface = {\r\n    viewButton: false,\r\n    cellType: '',\r\n    viewText: false,\r\n    viewLeadingIcon: false,\r\n    viewTrailingIcon: false,\r\n    viewChip: false,\r\n    viewAvatar: false\r\n  }\r\n  rowData = rawData.map((current): { [key: string]: GridInterface } => {\r\n    return {\r\n      \"Button\": {\r\n        ...this.params,\r\n        cellType: \"row\",\r\n        viewButton: true,\r\n        buttonConfig: {\r\n          id: 0,\r\n          type: 'outline',\r\n          state: current.buttonState,\r\n          size: 'small',\r\n          text: 'Button',\r\n        },\r\n        buttonClicked: (evt: Event) => {\r\n          console.log(evt);\r\n        }\r\n      },\r\n    }\r\n  }\r\n  );\r\n  \r\n}\r\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport { RouterOutlet } from '@angular/router';\r\nimport { CustomButtonComponent } from \"../../Project/components/custom-button/custom-button.component\";\r\nimport { ButtonInterface } from '../../Project/Interface/custom-button-interface';\r\nimport { GridInterface } from '../../Project/Interface/grid-interface';\r\nimport rawData from './data';\r\nimport { CardComponent } from \"../../Project/components/Card/card/card.component\";\r\nimport { NavbarComponent } from \"../../Project/components/navbar/navbar.component\";\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  standalone: true,\r\n  imports: [RouterOutlet, CustomButtonComponent, CardComponent, NavbarComponent],\r\n  templateUrl: './app.component.html',\r\n  styleUrl: './app.component.css'\r\n})\r\nexport class AppComponent {\r\n  title = 'saras-design';\r\n  global_theme: string = 'theme-primary';\r\n  golbal_mode: string = 'dark_mode';\r\n  params: GridInterface = {\r\n    viewButton: false,\r\n    cellType: '',\r\n    viewText: false,\r\n    viewLeadingIcon: false,\r\n    viewTrailingIcon: false,\r\n    viewChip: false,\r\n    viewAvatar: false\r\n  }\r\n  rowData = rawData.map((current): { [key: string]: GridInterface } => {\r\n    return {\r\n      \"Button\": {\r\n        ...this.params,\r\n        cellType: \"row\",\r\n        viewButton: true,\r\n        buttonConfig: {\r\n          id: 0,\r\n          type: 'outline',\r\n          state: current.buttonState,\r\n          size: 'small',\r\n          text: 'Button',\r\n        },\r\n        buttonClicked: (evt: Event) => {\r\n          console.log(evt);\r\n        }\r\n      },\r\n    }\r\n  }\r\n  );\r\n  \r\n}\r\n",
             "styleUrl": "./app.component.css",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<div class=\"saras-theme\">\r\n    <app-custom-button text=\"Button\" type=\"primary\" size=\"medium\" state=\"normal\"></app-custom-button>\r\n</div>"
+            "templateData": "<div class=\"{{global_theme}} {{golbal_mode}}\" [style]=\"'height:100%;'\">\r\n    <app-custom-button text=\"Button\" type=\"primary\" size=\"medium\" state=\"normal\"></app-custom-button>\r\n    <app-card type=\"Priamry\" ></app-card>\r\n    <app-navbar></app-navbar>\r\n</div>\r\n"
         }
     ],
     "modules": [],
@@ -188,7 +206,7 @@
                 "linktype": "component",
                 "name": "AppComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/5",
+                "coverageCount": "0/6",
                 "status": "low"
             },
             {
