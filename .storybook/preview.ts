@@ -29,7 +29,7 @@ const preview: Preview = {
   },
   decorators: [
     componentWrapperDecorator(
-      (story) => `<div [class]="myTheme+' '+ myMode">${story}</div>`,
+      (story) => `<div [ngClass]="[myTheme,myMode]">${story}</div>`,
       ({ globals }) => {
         return {
           myTheme: globals['theme'],

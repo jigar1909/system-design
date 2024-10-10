@@ -1,4 +1,4 @@
-<div class="{{global_theme}} {{golbal_mode}}" [style]="'height:100%;'">
+<div [ngClass]="[global_theme, golbal_mode]" [style]="'height:100%;'">
     <app-custom-button text="Button" type="primary" size="medium" state="normal"></app-custom-button>
     <app-card type="Priamry" ></app-card>
     <app-navbar></app-navbar>
